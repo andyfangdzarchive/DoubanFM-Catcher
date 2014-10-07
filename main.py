@@ -68,7 +68,6 @@ while len(playlist) < n:
   except KeyboardInterrupt:
     break
 
-for song in playlist:
-  get_song(playlist[song])
-
+with open('output.json', 'w') as fd:
+  fd.write(json.dumps(playlist))
 
